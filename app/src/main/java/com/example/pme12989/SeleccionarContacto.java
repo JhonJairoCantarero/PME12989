@@ -31,7 +31,7 @@ public class SeleccionarContacto extends AppCompatActivity {
     Button btnElimi;
     Button btnLLamar;
     Button btnRegres;
-    Button btnCompartir;
+    Button btnCompartirAC;
 
 
     @Override
@@ -45,7 +45,7 @@ public class SeleccionarContacto extends AppCompatActivity {
         nota = (EditText) findViewById(R.id.ACNota);
 
         btnActualiza = (Button) findViewById(R.id.ACtnRegresar);
-
+        btnCompartirAC = (Button) findViewById(R.id.btnCompartir);
         Bundle obj = getIntent().getExtras();
 
         Contactar conta = null;
@@ -117,7 +117,7 @@ public class SeleccionarContacto extends AppCompatActivity {
             }
         });
 
-        btnCompartir.setOnClickListener(new View.OnClickListener(){
+        btnCompartirAC.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent compartir = new Intent(android.content.Intent.ACTION_SEND);
